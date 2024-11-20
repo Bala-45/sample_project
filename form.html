@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Form</title>
+    <link rel="stylesheet" href="form1.css">
+</head>
+<body>
+<div class="container">
+        
+<div class="part1">
+        <div class="center">
+        
+            
+    <h2 style=" margin-top: 10px;text-align: center;" >Player Form </h2>
+<form id="playerForm" onsubmit="return validateForm()">
+<div class="name">
+        <br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name">
+        <span id="nameError" class="error"></span>
+</div>
+<div class="age">
+        <br>
+        <label for="age">Age:</label>
+        <input type="number" min="0" max="110" id="age" name="age" placeholder="Age">
+        <span id="ageError" class="error"></span>
+</div>
+<div class="gender">
+        <br>
+        <label>Gender:</label>
+        <select id="gender" name="gender">
+        <option value="">-Select Gender-</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        </select>
+        <span id="genderError" class="error"></span>
+</div>
+<div class="SportsType">
+        <br>
+        <label for="SportsType">SportsType:</label>
+        <select id="SportsType" name="sportsType" onchange="updateSportsOptions(this)">
+        <option value="">-Select Sports Type-</option>
+        <option value="indoor">Indoor Games</option>
+        <option value="outdoor">Outdoor Games</option>
+         </select>
+        <span id="sportsTypeError" class="error"></span>
+</div>
+<div class="Sports">
+        <br>
+        <label>Sports:</label>
+        <select id="Sports" name="Sports">
+        <option value disabled selected>Select a Sport Type first</option>
+        </select>
+        <span id="sportsError" class="error"></span>
+</div>
+<div class="Profile">
+        <br>
+        <label>Profile Photo:</label>
+        <input type="file" id="profile_photo" name="profile_photo" accept="image/*" placeholder="Choose a photo">
+        <span id="profilePhotoError" class="error"></span>
+</div>
+<div class="button">
+
+<button type="submit">Submit</button>
+</div>
+
+</div>
+</div>
+
+
+<div class="part2">
+        <h2 style = "text-align: center;">Player Details</h2>
+        <p class="output" id="output1"></p>
+</div>
+<div id="output1" class="player-details"></div>
+<div class="part3">
+        <h3>Search Player</h3>
+       <input type="text" id="search_by_name" placeholder="Search by name" style="width: 346px;height:13px;margin-left: auto;">
+        <br><br>
+       <select id="search_filter" style="width: 352px;height:20px; margin-left: auto;">
+        <option value="All">All</option>
+        <option value="indoor">Indoor Sports</option>
+        <option value="outdoor">Outdoor Sports</option>
+        </select>
+</div>
+</div>
+    <script src="form1.js"></script>
+</form>
+</body>
+</html>

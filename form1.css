@@ -1,0 +1,149 @@
+.container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 80% 20%; 
+  gap: 5px; 
+  height: 100vh;
+}
+
+.part1 {
+  grid-row: 1 / 2; 
+  background: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+  border: 1px solid black; 
+  height:474px;
+  padding: 2px;
+}
+
+.part2 {
+  grid-row: 1 / 3; 
+  background: radial-gradient(859px at 10% 20%, rgb(245, 220, 154) 0%, rgb(164, 78, 51) 90%);
+  border: 1px solid black;
+  overflow-y: auto;
+}
+
+.part3 {
+  grid-row: 2 / 3; 
+  background: radial-gradient(circle at 10% 20%, rgb(85, 149, 27) 0.1%, rgb(183, 219, 87) 90%);
+  border: 1px solid black;
+
+}
+
+label {
+  font-size: 15px;
+}
+
+.player {
+  position: relative;
+  margin: 20px;
+  border: 2px solid black;
+  width: 300px;
+  height: 300px;
+}
+
+.player img {
+  width: 100%;
+  height: 100%;
+  filter: blur(10px);
+}
+
+.user-data {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: hwb(0 7% 7% / 0.859);
+  text-align: left;
+  font-size: smaller;
+}
+
+.button-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  bottom: 5px;
+  gap: 15px;
+}
+
+.button-container button {
+  background: linear-gradient(109.6deg, rgb(251, 250, 225) 11.2%, rgb(206, 240, 185) 47.5%, rgb(100, 163, 111) 100.2%);
+  color: hsl(0, 0%, 7%);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 80px;
+  height: 30px;
+}
+
+#playerForm {
+  padding: 1px;
+  margin-top: 1px;
+}
+
+#playerForm button {
+  width: 90%;
+  background: linear-gradient(108.1deg, rgb(167, 220, 225) 11.2%, rgb(217, 239, 242) 88.9%);
+  border-radius: 10px;
+  padding: 5px 0;
+  margin-top: 15px;
+  border-color: none;
+}
+
+span.error {
+  color: rgb(235, 33, 33);
+  font-size: 13px;
+  font-style: italic;
+  width: fit-content;
+  padding-left: 100px;
+  display: block;
+  border-radius: 3px;
+  margin-top: 5px;
+}
+
+input[type=text]
+{
+  width:70%;
+  padding: 2px;
+  display: inline;
+  resize: vertical;
+  margin-left: 42px;
+}
+input[type=number]
+{
+  width:70%;
+  padding: 2px;
+  display: inline;
+  resize: vertical;
+  margin-left: 54px;
+}
+.gender select {
+  width:72%;
+  padding: 2px;
+  margin-left: 33px;
+}
+.SportsType select {
+  width:72%;
+  padding: 2px;
+  margin-left: 10px;
+}
+.Sports select {
+  width:72%;
+  padding: 2px;
+  margin-left: 39px;
+}
+
+input[type="file"] {
+  width: 70%;
+  padding: 5px;
+  height: 13px;
+
+  background-color: white;
+  resize: vertical;
+}
+.center
+{
+  margin-left: 45px;
+  align-items: center;
+  height: 500px;
+}
